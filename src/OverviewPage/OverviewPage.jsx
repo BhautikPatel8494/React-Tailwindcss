@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 function OverviewPage() {
     const [selectedValue, setSelectedValue] = useState(1)
     return (
-        <div>
+        <div className="flex flex-col min-h-screen w-11/12 mx-auto bg-white lg:w-25 md:w-4/12">
             <div className="p-4">
                 <div className="space-y-1 py-5">
                     <h3 className="font-semibold">Digital Ninja</h3>
