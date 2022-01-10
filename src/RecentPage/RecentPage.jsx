@@ -3,13 +3,15 @@ import logo2 from "../assets/Logo2.png";
 import shareIcon from "../assets/Share.png";
 import sendIcon from "../assets/Send.png";
 import usersIcon from "../assets/Users.png";
+import profile1 from "../assets/profileOverview.png";
+import profile2 from "../assets/mainProfile.png";
 import "./RecentPage.css";
 
 const RecentPage = () => {
   const [selectedValue, setSelectedValue] = useState(1);
 
   return (
-    <div className="flex flex-col min-h-screen w-11/12 mx-auto bg-white lg:w-25 md:w-4/12">
+    <div className="flex flex-col min-h-screen mx-auto bg-white lg:w-25 md:w-4/12">
       <div className="h-14 w-full bg-purple-200"></div>
       <div className="flex justify-between w-11/12 mx-auto -mt-7">
         <img src={logo2} alt="defi" />
@@ -79,12 +81,12 @@ const RecentPage = () => {
               <div className="flex">
                 <img
                   className="rounded-full border border-gray-100 shadow-sm h-10"
-                  src="https://randomuser.me/api/portraits/women/81.jpg"
+                  src={profile1}
                   alt="userImage"
                 />
                 <div className="mx-2">
                   <p>
-                    <span className="text-slate-400">johdoe.near</span>signed
+                    <span className="text-slate-400">johdoe.near</span> signed
                     the contract successfully
                   </p>
                   <p>2 days ago</p>
@@ -93,7 +95,7 @@ const RecentPage = () => {
               <div className="flex">
                 <img
                   className="rounded-full border border-gray-100 shadow-sm h-10"
-                  src="https://randomuser.me/api/portraits/women/81.jpg"
+                  src={profile2}
                   alt="userImage"
                 />
                 <div className="mx-2">
