@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./HomePage.css";
 import searchIcon from "../assets/Search.png";
 import filterIcon from "../assets/Frame.png";
@@ -11,10 +11,13 @@ import gamesIcon from "../assets/Games.png";
 import marketPlacesIcon from "../assets/MarketPlaces.png";
 import defiIcon from "../assets/Defi.png";
 import collectiblesIcon from "../assets/Collectibles.png";
+import othersIcon from "../assets/Others.png";
 import utilitiesIcon from "../assets/Utilities.png";
 import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const [toggleModal, setToggleModal] = useState(false);
+
   const navigate = useNavigate();
   function recentRedirect() {
     navigate("/recent");
@@ -22,10 +25,70 @@ const HomePage = () => {
 
   return (
     <>
+      <div
+        className={
+          toggleModal
+            ? "fixed z-20 top-0 left-0 w-full h-screen overflow-hidden bg-black/50 block"
+            : "hidden"
+        }
+      >
+        <div className="bg-white w-3/5 h-2/3 mx-auto my-20 py-4 px-2 rounded-xl lg:w-1/4 md:w-2/5">
+          <div className="flex justify-between items-center my-1 mx-2">
+            <div className="flex justify-around items-center">
+              <p className="my-0 mx-2">Filter</p>
+              <p className="text-white h-6 w-6 text-center rounded-3xl bg-violet-600">
+                2
+              </p>
+            </div>
+            <span
+              onClick={() => setToggleModal(false)}
+              className="text-4xl cursor-pointer"
+            >
+              &times;
+            </span>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="flex items-center w-11/12 mx-auto my-2.5">
+              <input className="scale-125 mr-5" type="checkbox" name="" id="" />
+              <p className="font-semibold">All Experiences</p>
+            </div>
+            <div className="flex items-center w-11/12 mx-auto my-2.5">
+              <input className="scale-125 mr-5" type="checkbox" name="" id="" />
+              <img className="mr-5" src={exchangesIcon} alt="exchanges" />
+              <p className="font-semibold">Exchanges</p>
+            </div>
+            <div className="flex items-center w-11/12 mx-auto my-2.5">
+              <input className="scale-125 mr-5" type="checkbox" name="" id="" />
+              <img className="mr-5" src={gamesIcon} alt="games" />
+              <p className="font-semibold">Games</p>
+            </div>
+            <div className="flex items-center w-11/12 mx-auto my-2.5">
+              <input className="scale-125 mr-5" type="checkbox" name="" id="" />
+              <img className="mr-5" src={marketPlacesIcon} alt="marketplaces" />
+              <p className="font-semibold">MarketPalce</p>
+            </div>
+            <div className="flex items-center w-11/12 mx-auto my-2.5">
+              <input className="scale-125 mr-5" type="checkbox" name="" id="" />
+              <img className="mr-5" src={defiIcon} alt="defi" />
+              <p className="font-semibold">Defi</p>
+            </div>
+            <div className="flex items-center w-11/12 mx-auto my-2.5">
+              <input className="scale-125 mr-5" type="checkbox" name="" id="" />
+              <img className="mr-5" src={collectiblesIcon} alt="collactibles" />
+              <p className="font-semibold">Collactibles</p>
+            </div>
+            <div className="flex items-center w-11/12 mx-auto my-2.5">
+              <input className="scale-125 mr-5" type="checkbox" name="" id="" />
+              <img className="mr-5" src={othersIcon} alt="other" />
+              <p className="font-semibold">Others</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-col min-h-screen w-11/12 mx-auto my-3 bg-white lg:w-25 md:w-4/12">
         <div className="relative flex justify-between items-center w-full h-12">
           <img
-            className="absolute top-2.5 left-2.5 z-50"
+            className="absolute top-2.5 left-2.5 z-10 cursor-pointer"
             src={searchIcon}
             alt="search"
           />
@@ -35,7 +98,8 @@ const HomePage = () => {
             placeholder="Search experiences"
           />
           <img
-            className="absolute top-0 right-0 m-2"
+            onClick={() => setToggleModal(true)}
+            className="absolute top-0 right-0 m-2 cursor-pointer"
             src={filterIcon}
             alt="filter"
           />
