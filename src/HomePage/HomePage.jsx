@@ -77,9 +77,7 @@ const HomePage = () => {
             Popular Categories
           </p>
           <div className="flex items-center">
-            <a className="m-2.5 text-violet-500 font-medium" href="">
-              See All
-            </a>
+            <p className="m-2.5 text-violet-500 font-medium">See All</p>
             <img className="w-18 h-18" src={rightArrowColorIcon} alt="arrow" />
           </div>
         </div>

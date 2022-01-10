@@ -15,13 +15,7 @@ const RecentPage = () => {
         <img src={logo2} alt="defi" />
         <div className="flex justify-center items-center mt-8">
           <img className="h-18 w-18 mr-2" src={shareIcon} alt="share" />
-          <a
-            className="text-blue-600 font-semibold tracking-wide"
-            href=""
-            alt="share"
-          >
-            Share
-          </a>
+          <p className="text-blue-600 font-semibold tracking-wide">Share</p>
         </div>
       </div>
       <div className="flex flex-col w-11/12 mx-auto my-0">
