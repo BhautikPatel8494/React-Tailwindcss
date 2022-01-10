@@ -9,7 +9,7 @@ In the project directory, you can run:
 #### `yarn start`
 
 Runs the app in the development mode.\
-Open [https://61dbe12bf1e4d10008710a7c--condescending-einstein-91559c.netlify.app](https://61dbe12bf1e4d10008710a7c--condescending-einstein-91559c.netlify.app) to view it in your browser.
+Open [https://react-tailwindcss-bhautikpatel8494.vercel.app](https://react-tailwindcss-bhautikpatel8494.vercel.app) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -21,13 +21,13 @@ For the demo i have try to use mix of css and tailwind in future that can be mod
 
 In this project we have 3 routes which are:
 
-[https://61dbe12bf1e4d10008710a7c--condescending-einstein-91559c.netlify.app](https://61dbe12bf1e4d10008710a7c--condescending-einstein-91559c.netlify.app): It's Home route
+[https://react-tailwindcss-bhautikpatel8494.vercel.app](https://react-tailwindcss-bhautikpatel8494.vercel.app): It's Home route
 This route is usig pure CSS classes
 
-[https://61dbe12bf1e4d10008710a7c--condescending-einstein-91559c.netlify.app/recent](https://61dbe12bf1e4d10008710a7c--condescending-einstein-91559c.netlify.app/recent): It's recent item route
+[https://react-tailwindcss-bhautikpatel8494.vercel.app/recent](https://react-tailwindcss-bhautikpatel8494.vercel.app/recent): It's recent item route
 This route is usig pure CSS classes and also the tailwind classes
 
-[https://61dbe12bf1e4d10008710a7c--condescending-einstein-91559c.netlify.app/overview](https://61dbe12bf1e4d10008710a7c--condescending-einstein-91559c.netlify.app/overview): It's Home route
+[https://react-tailwindcss-bhautikpatel8494.vercel.app/overview](https://react-tailwindcss-bhautikpatel8494.vercel.app/overview): It's Home route
 This route is usig only tailwind classes
 
 Please review the code and let me know your though's for the same, If we only need to use tailwind then here i will update all code with tailwind classes but for the testing purpose only i have added both in this project
