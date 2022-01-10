@@ -13,7 +13,7 @@ const RecentPage = () => {
 
   return (
     <>
-      <div
+      {/* <div
         className={
           toggleModal
             ? "fixed z-20 top-0 left-0 w-full h-screen overflow-hidden bg-black/50 block"
@@ -34,13 +34,13 @@ const RecentPage = () => {
             <div className="bg-indigo-500">jklkjh</div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="flex flex-col min-h-screen mx-auto bg-white lg:w-25 md:w-4/12">
         <div className="h-14 w-full bg-purple-200"></div>
         <div className="flex justify-between w-11/12 mx-auto -mt-7">
           <img src={logo2} alt="defi" />
           <div
-            onClick={() => setToggleModal(true)}
+            // onClick={() => setToggleModal(true)}
             className="flex justify-center items-center cursor-pointer mt-8"
           >
             <img className="h-18 w-18 mr-2" src={shareIcon} alt="share" />

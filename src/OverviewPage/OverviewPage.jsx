@@ -8,7 +8,7 @@ function OverviewPage() {
   const [toggleModal, setToggleModal] = useState(false);
   return (
     <>
-      <div
+      {/* <div
         className={
           toggleModal
             ? "fixed z-20 top-0 left-0 w-full h-screen overflow-hidden bg-black/50 block"
@@ -31,7 +31,7 @@ function OverviewPage() {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="flex flex-col min-h-screen w-full mx-auto bg-white lg:w-25 md:w-4/12">
         <img className="h-2/3 w-full" src={coverImage} alt="cover" />
@@ -116,7 +116,7 @@ function OverviewPage() {
                           Accept
                         </button>
                         <button
-                          onClick={() => setToggleModal(true)}
+                          // onClick={() => setToggleModal(true)}
                           className="bg-slate-800 text-white rounded px-4"
                         >
                           Counter offer
