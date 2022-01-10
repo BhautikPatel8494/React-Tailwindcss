@@ -59,7 +59,7 @@ const HomePage = () => {
         <div className="categoryHeader">
           <p className="categoryTag">Popular Categories</p>
           <div className="seeAllTag">
-            <a href="">See all</a>
+            <p>See all</p>
             <img src={rightArrowColorIcon} alt="arrow" />
           </div>
         </div>

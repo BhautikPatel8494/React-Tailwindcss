@@ -116,12 +116,13 @@
 }
 
 .seeAllTag {
+  padding-right: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.seeAllTag a {
+.seeAllTag p {
   margin: 10px;
   text-decoration: none;
   color: #885fff;

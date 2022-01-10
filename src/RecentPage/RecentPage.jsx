@@ -15,7 +15,7 @@ const RecentPage = () => {
         <img src={logo2} alt="defi" />
         <div className="shareSection">
           <img src={shareIcon} alt="share" />
-          <a href="" alt="share">Share</a>
+          <p>Share</p>
         </div>
       </div>
       <div className="septateRecentDescription space-y-2">
