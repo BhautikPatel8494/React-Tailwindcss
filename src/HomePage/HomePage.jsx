@@ -23,6 +23,9 @@ const HomePage = () => {
     navigate("/recent");
   }
 
+  const ratingLength = Array.from({ length: 5 });
+  const ratings = 3.5;
+
   return (
     <>
       <div
@@ -145,8 +148,8 @@ const HomePage = () => {
             <img className="w-18 h-18" src={rightArrowColorIcon} alt="arrow" />
           </div>
         </div>
-        <div className="flex flex-wrap w-full">
-          <div className="flex flex-col mx-auto my-2 p-2.5 h-5/12 w-5/12 bg-indigo-50 rounded-lg">
+        <div className="flex flex-wrap gap-3 w-full">
+          <div className="flex flex-col p-2.5 h-5/12 w-5/15 bg-indigo-50 rounded-lg">
             <img
               className="w-10 h-10 mb-4"
               src={exchangesIcon}
@@ -157,14 +160,14 @@ const HomePage = () => {
               <img src={rightArrowIcon} alt="arrow" />
             </div>
           </div>
-          <div className="flex flex-col mx-auto my-2 p-2.5 h-5/12 w-5/12 bg-zinc-100 rounded-lg">
+          <div className="flex flex-col p-2.5 h-5/12 w-5/15 bg-zinc-100 rounded-lg">
             <img className="w-10 h-10 mb-4" src={gamesIcon} alt="games" />
             <div className="relative flex justify-between items-center">
               <p>Games</p>
               <img src={rightArrowIcon} alt="arrow" />
             </div>
           </div>
-          <div className="flex flex-col mx-auto my-2 p-2.5 h-5/12 w-5/12 bg-emerald-50 rounded-lg">
+          <div className="flex flex-col p-2.5 h-5/12 w-5/15 bg-emerald-50 rounded-lg">
             <img
               className="w-10 h-10 mb-4"
               src={marketPlacesIcon}
@@ -175,14 +178,14 @@ const HomePage = () => {
               <img src={rightArrowIcon} alt="arrow" />
             </div>
           </div>
-          <div className="flex flex-col mx-auto my-2 p-2.5 h-5/12 w-5/12 bg-orange-50 rounded-lg">
+          <div className="flex flex-col p-2.5 h-5/12 w-5/15 bg-orange-50 rounded-lg">
             <img className="w-10 h-10 mb-4" src={defiIcon} alt="defi" />
             <div className="relative flex justify-between items-center">
               <p>Defi</p>
               <img src={rightArrowIcon} alt="arrow" />
             </div>
           </div>
-          <div className="flex flex-col mx-auto my-2 p-2.5 h-5/12 w-5/12 bg-blue-100 rounded-lg">
+          <div className="flex flex-col p-2.5 h-5/12 w-5/15 bg-blue-100 rounded-lg">
             <img
               className="w-10 h-10 mb-4"
               src={collectiblesIcon}
@@ -193,7 +196,7 @@ const HomePage = () => {
               <img src={rightArrowIcon} alt="arrow" />
             </div>
           </div>
-          <div className="flex flex-col mx-auto my-2 p-2.5 h-5/12 w-5/12 bg-violet-100 rounded-lg">
+          <div className="flex flex-col p-2.5 h-5/12 w-5/15 bg-violet-100 rounded-lg">
             <img
               className="w-10 h-10 mb-4"
               src={utilitiesIcon}
@@ -204,6 +207,19 @@ const HomePage = () => {
               <img src={rightArrowIcon} alt="arrow" />
             </div>
           </div>
+        </div>
+        <div className="flex">
+          {ratingLength.map((_, i) => (
+            <>
+              {i >= ratings ? (
+                <i className="fa-regular fa-star starIcon"></i>
+              ) : i === ratings - 0.5 ? (
+                <i className="fas fa-star-half-stroke starIcon"></i>
+              ) : (
+                <i className="fas fa-star starIcon"></i>
+              )}
+            </>
+          ))}
         </div>
       </div>
     </>

@@ -5,6 +5,10 @@ import sendIcon from "../assets/Send.png";
 import usersIcon from "../assets/Users.png";
 import profile1 from "../assets/profileOverview.png";
 import profile2 from "../assets/mainProfile.png";
+import copyIcon from "../assets/CopyIcon.png";
+import tweetIcon from "../assets/Tweet.png";
+import dicordIcon from "../assets/Discord.png";
+import telegramIcon from "../assets/Telegram.png";
 import "./RecentPage.css";
 
 const RecentPage = () => {
@@ -13,16 +17,16 @@ const RecentPage = () => {
 
   return (
     <>
-      {/* <div
+      <div
         className={
           toggleModal
-            ? "fixed z-20 top-0 left-0 w-full h-screen overflow-hidden bg-black/50 block"
+            ? "fixed z-20 top-0 left-0 w-full h-screen overflow-hidden bg-neutral-400 block"
             : "hidden"
         }
       >
-        <div className="bg-white w-3/5 h-2/5 mx-auto my-20 py-4 px-2 rounded-xl lg:w-1/4 md:w-2/5">
+        <div className="bg-white w-3/5 h-50 mx-auto my-20 py-4 px-2 rounded-xl lg:w-1/4 md:w-2/5">
           <div className="flex justify-between items-center my-1 mx-2">
-            <p className="my-0 mx-2">Share this Experience</p>
+            <p className="font-semibold my-0 mx-2">Share this Experience</p>
             <span
               onClick={() => setToggleModal(false)}
               className="text-4xl cursor-pointer"
@@ -30,17 +34,30 @@ const RecentPage = () => {
               &times;
             </span>
           </div>
-          <div className="flex flex-col">
-            <div className="bg-indigo-500">jklkjh</div>
+          <div className="flex flex-col w-11/12 mx-auto">
+            <div className="bg-indigo-50 text-blue-500 text-center rounded-lg p-3">
+              https://nearlabs.app/app/docu_s...
+            </div>
+            <div className="flex justify-center items-center mt-4">
+              <img src={copyIcon} alt="copy" />
+              <p className="text-blue-500 font-semibold ml-1 fontFamily">
+                Copy link
+              </p>
+            </div>
+            <div className="flex justify-center items-center mt-6">
+              <img className="m-2" src={tweetIcon} alt="tweet" />
+              <img className="m-2" src={dicordIcon} alt="discord" />
+              <img className="m-2" src={telegramIcon} alt="telegram" />
+            </div>
           </div>
         </div>
-      </div> */}
+      </div>
       <div className="flex flex-col min-h-screen mx-auto bg-white lg:w-25 md:w-4/12">
         <div className="h-14 w-full bg-purple-200"></div>
         <div className="flex justify-between w-11/12 mx-auto -mt-7">
           <img src={logo2} alt="defi" />
           <div
-            // onClick={() => setToggleModal(true)}
+            onClick={() => setToggleModal(true)}
             className="flex justify-center items-center cursor-pointer mt-8"
           >
             <img className="h-18 w-18 mr-2" src={shareIcon} alt="share" />
